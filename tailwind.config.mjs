@@ -6,7 +6,7 @@ export default {
 	theme: {
 		extend: {},
         fontFamily: {
-            'display': ['"Outfit Variable"', ...defaultTheme.fontFamily.sans],
+            'display': ['"Outfit Variable"', 'serif'],
         }
 	},
 	plugins: [],
