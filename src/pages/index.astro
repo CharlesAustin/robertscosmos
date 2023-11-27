@@ -1,13 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+//import Card from '../components/Card.astro';
 import { getCollection } from 'astro:content';
 const posts = await getCollection('posts');
 ---
 
 <Layout title="Robert's Cosmos">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Robert's Cosmos</span></h1>
+		<h1 class="font-display text-5xl">Welcome to Robert's Cosmos</h1>
 		<ul role="list" class="link-card-grid">
             {
                 posts.map((post) => {
