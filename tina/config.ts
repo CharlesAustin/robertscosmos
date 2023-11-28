@@ -29,6 +29,37 @@ export default defineConfig({
     schema: {
         collections: [
             {
+                name: 'global',
+                label: 'Global',
+                path: 'src/content/globals',
+                ui: {
+                    allowedActions: {
+                        create: false,
+                        delete: false,
+                    },
+                },
+                fields: [
+                    {
+                        type: "object",
+                        name: "header",
+                        label: "Header",
+                        fields: [
+                            {
+                                type: "reference",
+                                name: "mainNavigation",
+                                label: "Main Navigation",
+                                description: "Select a page",
+                                ui: {
+                                    component: "select",
+                                    
+                                },
+                                collections: ["post"],
+                            },
+                        ]
+                    },
+                ],
+            },
+            {
                 name: "post",
                 label: "Posts",
                 path: "src/content/posts",
